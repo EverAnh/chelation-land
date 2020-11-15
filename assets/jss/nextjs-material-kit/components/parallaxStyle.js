@@ -10,11 +10,13 @@ const parallaxStyle = theme => ({
     padding: "0",
     border: "0",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   },
   filter: {
     "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
+      backgroundImage: "linear-gradient(to top, #cec3e7 0%, #fef2fb 100%)",
+      opacity: "0.5"
     },
     "&:after,&:before": {
       position: "absolute",
@@ -28,7 +30,10 @@ const parallaxStyle = theme => ({
     }
   },
   small: {
-    height: "380px"
+    height: "200px",
+    [theme.breakpoints.down("sm")]: {
+      height: "auto"
+    }
   },
   parallaxResponsive: {
     [theme.breakpoints.down("md")]: {

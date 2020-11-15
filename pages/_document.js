@@ -3,6 +3,9 @@ import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";
 
 class MyDocument extends Document {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <html lang="en">

@@ -1,7 +1,9 @@
 const cardBodyStyle = {
   cardBody: {
-    padding: "0.9375rem 1.875rem",
-    flex: "1 1 auto"
+    padding: "0.9375rem",
+    flex: "1 1 auto",
+    display: "flex",
+    justifyContent: "stretch"
   }
 };
 
