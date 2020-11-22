@@ -5,16 +5,20 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
-const styles = {
+const styles = theme => ({
   grid: {
     position: "relative",
     width: "100%",
     minHeight: "1px",
     paddingRight: "15px",
     paddingLeft: "15px",
-    flexBasis: "auto"
+    flexBasis: "auto",
+    [theme.breakpoints.down("xs")]: {
+      paddingRight: "5px",
+      paddingLeft: "5px",
+    }
   }
-};
+});
 
 const useStyles = makeStyles(styles);
 

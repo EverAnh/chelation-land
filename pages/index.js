@@ -22,10 +22,10 @@ export default function Index(props) {
           <GridItem md="6" xs="12">
             <Card>
               <CardBody>
-                <a href="/time" className={classes.menuLink}>
+                <a href="/timers" className={classes.menuLink}>
                   <h3 className={classes.menuHeader}>Event Timers</h3>
                 </a>
-                <a href="/time">
+                <a href="/timers">
                   <img src={require("assets/img/Study-Calendar.png")} className={classes.cardRight} />
                 </a>
               </CardBody>
