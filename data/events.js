@@ -17,7 +17,7 @@ const events = [
   },
   {
     name: "Selection Pack - Magia Balance Change",
-    categ: "other",
+    categ: "bag",
     future: false,
     link: "http://jp.rika.ren/pop_up.html#id=2138",
     moment: moment.parseZone("11/27/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
@@ -31,7 +31,7 @@ const events = [
   },
   {
     name: "Start of: Mirrors Ranking",
-    categ: "eventStart",
+    categ: "ranking",
     future: true,
     link: "http://jp.rika.ren/pop_up.html#id=2153",
     moment: moment.parseZone("11/30/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
@@ -73,14 +73,14 @@ const events = [
   },
   {
     name: "End of: Mirrors Ranking",
-    categ: "eventEnd",
+    categ: "ranking",
     future: true,
     link: "http://jp.rika.ren/pop_up.html#id=2153",
     moment: moment.parseZone("12/6/2020 20:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
     name: "Mirrors Selection Bag",
-    categ: "other",
+    categ: "bag",
     future: true,
     link: "http://jp.rika.ren/pop_up.html#id=2148",
     moment: moment.parseZone("12/7/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')

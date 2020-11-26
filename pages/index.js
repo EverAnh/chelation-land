@@ -26,7 +26,7 @@ export default function Index(props) {
                   <h3 className={classes.menuHeader}>Event Timers</h3>
                 </a>
                 <a href="/timers">
-                  <img src={require("assets/img/Study-Calendar.png")} className={classes.cardRight} />
+                  <img src={require("assets/img/icons/Study-Calendar.png")} className={classes.cardRight} />
                 </a>
               </CardBody>
             </Card>

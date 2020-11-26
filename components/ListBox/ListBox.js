@@ -7,17 +7,23 @@ export default function ListBox(props) {
   const classes = useStyles();
   let imgReq = "";
   switch (props.categ) {
+    case "bag":
+      imgReq = require("assets/img/icons/bag.png");
+      break;
     case "gacha":
-      imgReq = require("assets/img/Gacha-Small.png");
+      imgReq = require("assets/img/icons/Gacha-Small.png");
       break;
     case "monthly":
-      imgReq = require("assets/img/mitama-f.png");
+      imgReq = require("assets/img/icons/mitama-f.png");
+      break;
+    case "ranking":
+      imgReq = require("assets/img/icons/mirrors-ranking.png");
       break;
     case "shopExpire":
-      imgReq = require("assets/img/riche-pack.png");
+      imgReq = require("assets/img/icons/riche-pack.png");
       break;
     default:
-      imgReq = require("assets/img/Study-Calendar.png");
+      imgReq = require("assets/img/icons/Study-Calendar.png");
   }
   return (
     <div className={classes.box}>
