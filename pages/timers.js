@@ -165,7 +165,25 @@ class Timers extends React.Component {
       el = el.filter(e => e.categ !== "gacha");
     }
     if (!this.state.filters.future) {
-      el = el.filter(e => !e.future)
+      // a 'future' moment can only go true -> false, not the other way
+      // upon the moment becoming before 'now'
+      // thus, false needs no check
+      // true needs check to see if it's still true or if it's changed
+      el = el.filter(e => {
+        // ordered such that the simple checks are first to skip moment stuff
+        if (!e.future) { return true; }
+        // no date given is always a future event
+        else if (!e.moment) { return false; }
+        else {
+          if (e.moment.isBefore(this.state.now)) {
+            // event has started and is no longer a future event like the hard-coded data says
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+      });
     }
     return el.map((e) => {
       if (e.moment && e.moment.isBefore(this.state.now)) {
