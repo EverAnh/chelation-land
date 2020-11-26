@@ -11,15 +11,17 @@ class MyDocument extends Document {
       <html lang="en">
         <Head>
           <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-LL8WKE0ESH"
+          />
+          <script
             dangerouslySetInnerHTML={{
-              __html: `<script async src="https://www.googletagmanager.com/gtag/js?id=G-LL8WKE0ESH"></script>
-                        <script>
-                          window.dataLayer = window.dataLayer || [];
-                          function gtag(){dataLayer.push(arguments);}
-                          gtag('js', new Date());
-
-                          gtag('config', 'G-LL8WKE0ESH');
-                        </script>`
+              __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-LL8WKE0ESH');
+                `,
             }}
           />
           <meta charSet="utf-8" />
@@ -29,11 +31,6 @@ class MyDocument extends Document {
           />
           <meta name="theme-color" content="#000000" />
           <link rel="shortcut icon" href={require("assets/img/favicon.png")} />
-          <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href={require("assets/img/apple-icon.png")}
-          />
           {/* Fonts and icons */}
           <link
             rel="stylesheet"
