@@ -10,9 +10,9 @@
     "start": "next start",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev"
   },
-  "author": "",
+  "author": "everanh",
   "license": "",
-  "homepage": "https://demos.creative-tim.com/nextjs-material-kit",
+  "homepage": "https://chelation.land",
   "dependencies": {
     "@material-ui/core": "4.9.13",
     "@material-ui/icons": "4.9.1",

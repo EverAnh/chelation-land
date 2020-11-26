@@ -28,8 +28,7 @@ class Timers extends React.Component {
       filters: {
         expires: true,
         gacha: true,
-        startTimes: true,
-        maintenance: true
+        future: true
       }
     };
     this.handleToggle = this.handleToggle.bind(this);
@@ -46,12 +45,12 @@ class Timers extends React.Component {
     clearInterval(this.timer);
   }
 
-  countdown(target, shortform) {
+  countdown(target, useShortform) {
     if (!target) {
       return "(Dates To Be Announced)";
     }
     else {
-      if (shortform) {
+      if (useShortform) {
         return <span className={this.props.classes.highlighted}>
             {moment.duration(target.diff(this.state.now)).hours() + "h " 
             + moment.duration(target.diff(this.state.now)).minutes() + "m " 
@@ -76,11 +75,8 @@ class Timers extends React.Component {
       case "gacha":
         newFilters.gacha = !newFilters.gacha;
         break;
-      case "startTimes":
-        newFilters.startTimes = !newFilters.startTimes;
-        break;
-      case "maintenance":
-        newFilters.maintenance = !newFilters.maintenance;
+      case "future":
+        newFilters.future = !newFilters.future;
         break;
       default:
         break;
@@ -140,21 +136,11 @@ class Timers extends React.Component {
                   }
                 />
                 <FormControlLabel
-                  label="Start Times"
+                  label="Future Events (Not Started Yet)"
                   control={
                     <Checkbox
-                      checked={this.state.filters.startTimes}
-                      onChange={() => (this.handleToggle("startTimes"))}
-                      color=""
-                    />
-                  }
-                />
-                <FormControlLabel
-                  label="Maintenance"
-                  control={
-                    <Checkbox
-                      checked={this.state.filters.maintenance}
-                      onChange={() => (this.handleToggle("maintenance"))}
+                      checked={this.state.filters.future}
+                      onChange={() => (this.handleToggle("future"))}
                       color=""
                     />
                   }
@@ -177,6 +163,9 @@ class Timers extends React.Component {
     }
     if (!this.state.filters.gacha) {
       el = el.filter(e => e.categ !== "gacha");
+    }
+    if (!this.state.filters.future) {
+      el = el.filter(e => !e.future)
     }
     return el.map((e) => {
       if (e.moment && e.moment.isBefore(this.state.now)) {
