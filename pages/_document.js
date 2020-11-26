@@ -10,6 +10,14 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL8WKE0ESH"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LL8WKE0ESH');
+          </script>
           <meta charSet="utf-8" />
           <meta
             name="viewport"
