@@ -159,7 +159,7 @@ class Timers extends React.Component {
   eventsList() {
     let el = eventsData;
     if (!this.state.filters.expires) {
-      el = el.filter(e => e.categ !== "shopExpire");
+      el = el.filter(e => e.categ !== "shopExpire" && e.categ !== "bag");
     }
     if (!this.state.filters.gacha) {
       el = el.filter(e => e.categ !== "gacha");
