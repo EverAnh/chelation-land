@@ -13,6 +13,9 @@ export default function ListBox(props) {
     case "gacha":
       imgReq = require("assets/img/icons/Gacha-Small.png");
       break;
+    case "maintenance":
+      imgReq = require("assets/img/icons/gears.png");
+      break;
     case "monthly":
       imgReq = require("assets/img/icons/mitama-f.png");
       break;
