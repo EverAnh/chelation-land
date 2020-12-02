@@ -98,11 +98,11 @@ class Timers extends React.Component {
     let update = {
       now: moment().utc().utcOffset(9 * 60)
     };
-    if (update.now.isAfter(this.state.rankedReset)) {
-      update.rankedReset = moment().utc().utcOffset(9 * 60).startOf('day').add(16,'hours').add(1, 'seconds');
-    }
     if (update.now.isAfter(this.state.daily)) {
       update.daily = moment().utc().utcOffset(9 * 60).startOf('day').add(1,'days').add(1, 'seconds');
+    }
+    if (update.now.isAfter(this.state.rankedReset)) {
+      update.rankedReset = moment().utc().utcOffset(9 * 60).startOf('day').add(24+16,'hours').add(1, 'seconds');
     }
     this.setState(update);
   }
