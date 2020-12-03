@@ -86,7 +86,7 @@ const events = [
     moment: moment.parseZone("12/7/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
-    name: "Start of: Angels On The Road",
+    name: "Start of: Angels On The Road, Part 2",
     categ: "eventMiddle",
     future: true,
     link: "http://jp.rika.ren/pop_up.html#id=2178",
