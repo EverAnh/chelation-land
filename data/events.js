@@ -2,69 +2,6 @@ import moment from "moment";
 
 const events = [
   {
-    name: "Start of: Dec 4 Maintenance",
-    categ: "maintenance",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2174",
-    moment: moment.parseZone("12/4/2020 16:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "End of: The Page I Write on the Holy Night",
-    categ: "eventEnd",
-    future: false,
-    link: null,
-    moment: moment.parseZone("12/4/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "End of: RikaRen Gacha",
-    categ: "gacha",
-    future: false,
-    link: "http://jp.rika.ren/pop_up.html#id=2149",
-    moment: moment.parseZone("12/4/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Shops Expire: Mitama's Special Training - Mikage Episode‎, Mikage Gacha Coins, Magical Girl Ticket - From Magia Balance Change",
-    categ: "shopExpire",
-    future: false,
-    link: null,
-    moment: moment.parseZone("12/4/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Shop Item Expires: 1200 Days Campaign Bag",
-    categ: "bag",
-    future: false,
-    link: null,
-    moment: moment.parseZone("12/4/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "End of: Dec 4 Maintenance",
-    categ: "maintenance",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2174",
-    moment: moment.parseZone("12/4/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Start of: Angels On The Road, Part 1",
-    categ: "eventStart",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2178",
-    moment: moment.parseZone("12/4/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Start of: Tsuruno Felicia Gacha",
-    categ: "gacha",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2177",
-    moment: moment.parseZone("12/4/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Start of: Himika Mao Gacha",
-    categ: "gacha",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2176",
-    moment: moment.parseZone("12/4/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
     name: "End of: Sentimental Gaze and 1200 Days Campaign",
     categ: "eventEnd",
     future: false,
