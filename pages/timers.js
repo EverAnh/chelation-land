@@ -24,7 +24,6 @@ class Timers extends React.Component {
     super(props);
     this.state = {
       now: moment().utc().utcOffset(9 * 60),
-      rankedReset: moment().utc().utcOffset(9 * 60).startOf('day').add(16,'hours').add(1, 'seconds'),
       daily: moment().utc().utcOffset(9 * 60).startOf('day').add(1,'days').add(1, 'seconds'),
       filters: {
         expires: true,
@@ -101,9 +100,6 @@ class Timers extends React.Component {
     if (update.now.isAfter(this.state.daily)) {
       update.daily = moment().utc().utcOffset(9 * 60).startOf('day').add(1,'days').add(1, 'seconds');
     }
-    if (update.now.isAfter(this.state.rankedReset)) {
-      update.rankedReset = moment().utc().utcOffset(9 * 60).startOf('day').add(24+16,'hours').add(1, 'seconds');
-    }
     this.setState(update);
   }
 
@@ -116,8 +112,7 @@ class Timers extends React.Component {
               <CalloutBox title="Server Time">
                 <strong className={this.props.classes.jumbo}>{this.state.now.format(timeF)} JST</strong><br />
                 {this.state.now.format(dateF)}<br />
-                Mirrors ranking reset: {this.countdown(this.state.rankedReset, true)}<br />
-                General daily reset: {this.countdown(this.state.daily, true)}
+                Daily reset in: {this.countdown(this.state.daily, true)}
               </CalloutBox>
               <CalloutBox title="Filters">
                 <FormControlLabel

@@ -2,13 +2,6 @@ import moment from "moment";
 
 const events = [
   {
-    name: "End of: Sentimental Gaze and 1200 Days Campaign",
-    categ: "eventEnd",
-    future: false,
-    link: null,
-    moment: moment.parseZone("12/4/2020 23:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
     name: "End of: Mirrors Ranking",
     categ: "ranking",
     future: false,
