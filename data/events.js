@@ -2,39 +2,11 @@ import moment from "moment";
 
 const events = [
   {
-    name: "Shops Expire: Mirrors Ranking, Mirrors Selection Ticket",
-    categ: "shopExpire",
-    future: false,
-    link: null,
-    moment: moment.parseZone("12/14/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "End of: Angels On The Road",
-    categ: "eventEnd",
-    future: false,
-    link: "http://jp.rika.ren/pop_up.html#id=2178",
-    moment: moment.parseZone("12/16/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "End of: Himika Mao Gacha",
-    categ: "gacha",
-    future: false,
-    link: "http://jp.rika.ren/pop_up.html#id=2176",
-    moment: moment.parseZone("12/16/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Start of: Christmas String (Touka / Nemu event)",
+    name: "Start of: Christmas String, part 2",
     categ: "eventStart",
-    future: true,
+    future: false,
     link: "http://jp.rika.ren/pop_up.html#id=2187",
-    moment: moment.parseZone("12/16/2020 16:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
-    name: "Start of: Touka / Nemu Gacha",
-    categ: "gacha",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2186",
-    moment: moment.parseZone("12/16/2020 16:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
+    moment: moment.parseZone("12/21/2020 17:00 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
     name: "Shops Expire: Angels On The Road",
@@ -44,10 +16,17 @@ const events = [
     moment: moment.parseZone("12/23/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
-    name: "End of: Christmas String (Touka / Nemu event)",
+    name: "End of: Christmas String",
     categ: "eventEnd",
-    future: true,
+    future: false,
     link: "http://jp.rika.ren/pop_up.html#id=2187",
+    moment: moment.parseZone("12/28/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
+  },
+  {
+    name: "End of: Touka / Nemu Gacha",
+    categ: "gacha",
+    future: false,
+    link: "http://jp.rika.ren/pop_up.html#id=2186",
     moment: moment.parseZone("12/28/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
@@ -58,13 +37,6 @@ const events = [
     moment: moment.parseZone("12/28/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
-    name: "End of: Touka / Nemu Gacha",
-    categ: "gacha",
-    future: true,
-    link: "http://jp.rika.ren/pop_up.html#id=2186",
-    moment: moment.parseZone("12/28/2020 14:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
-  },
-  {
     name: "Monthly Shop Reset",
     categ: "monthly",
     future: false,
@@ -72,7 +44,7 @@ const events = [
     moment: moment.parseZone("12/31/2020 23:59 +09", "MM/D/YYYY H:mm ZZ").add(1,'seconds')
   },
   {
-    name: "Shops Expire: Tsuruno / Felicia Gacha Coins, Touka / Nemu Gacha Coins",
+    name: "Shops Expire: Christmas Costume Tickets, Tsuruno / Felicia Gacha Coins, Touka / Nemu Gacha Coins",
     categ: "shopExpire",
     future: false,
     link: null,
