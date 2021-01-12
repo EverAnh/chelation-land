@@ -9,7 +9,8 @@ const timePageStyle = {
     margin: "8px 0"
   },
   highlighted: {
-    color: "#9379cc"
+    color: "#9379cc",
+    fontSize: "1.25rem"
   },
 };
 

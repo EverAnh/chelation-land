@@ -5,6 +5,7 @@ const useStyles = makeStyles(styles);
 
 export default function ListBox(props) {
   const classes = useStyles();
+  /*
   let imgReq = "";
   switch (props.categ) {
     case "bag":
@@ -28,10 +29,10 @@ export default function ListBox(props) {
     default:
       imgReq = require("assets/img/icons/Study-Calendar.png");
   }
+  */
   return (
     <div className={classes.box}>
       <div className={classes.boxBody}>
-        <img src={imgReq} className={classes.categImg2} />
         {props.children}
       </div>
     </div>
